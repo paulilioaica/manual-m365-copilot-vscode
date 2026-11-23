@@ -1,0 +1,12 @@
+Manual M365 Copilot for VS Code, 0.3.0
+License: AGPL-3.0-only
+
+BizChat and SignalR request/reply behavior adapted from M365CopilotVSCode by
+cristiancastineiras and contributors, commit a81c91c6509d4c020fc24ec64aaab67cba798771.
+https://github.com/cristiancastineiras/M365CopilotVSCode
+
+Local adaptation (23 November 2026): dependency-free desktop extension,
+native language model provider, manual token entry, conversation continuation,
+strict transcript limits,
+and a BizChat protocol implementation built on standard Node.js HTTP/HTTPS APIs.
+The original upstream license is included in LICENSE.

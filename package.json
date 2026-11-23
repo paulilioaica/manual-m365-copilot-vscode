@@ -1,0 +1,55 @@
+{
+  "name": "manual-m365-copilot",
+  "displayName": "Manual M365 Copilot",
+  "description": "Microsoft 365 Copilot in native VS Code Chat with a manually pasted token.",
+  "publisher": "local-tools",
+  "version": "0.3.0",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "main": "./extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "activationEvents": [
+    "onLanguageModelChatProvider:manual-m365"
+  ],
+  "contributes": {
+    "languageModelChatProviders": [
+      {
+        "vendor": "manual-m365",
+        "displayName": "Manual M365 Copilot",
+        "managementCommand": "manualM365.pasteToken"
+      }
+    ],
+    "commands": [
+      {
+        "command": "manualM365.pasteToken",
+        "title": "Manual M365 Copilot: Paste Token"
+      },
+      {
+        "command": "manualM365.forgetToken",
+        "title": "Manual M365 Copilot: Forget Token"
+      },
+      {
+        "command": "manualM365.configure",
+        "title": "Manual M365 Copilot: Choose License Route"
+      },
+      {
+        "command": "manualM365.diagnostics",
+        "title": "Manual M365 Copilot: Show Request Diagnostics"
+      }
+    ]
+  }
+}
